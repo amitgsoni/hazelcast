@@ -6,17 +6,17 @@ plugins{
     id 'com.github.johnrengelman.shadow' version '1.2.2'
 }
 
-group = 'com.hazelcast.starter'
+group = 'com.hazelcast.reload.poc'
 version = '1.0-SNAPSHOT'
 
 description = """
-Hazelcast Starter project for Gradle Users
+Hazelcast Reload POC
 """
 
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
 
-mainClassName = "com.hazelcast.gradle.starter.Starter"
+//mainClassName = "com.hazelcast.reload.poc.Server"
 applicationDefaultJvmArgs = ["-Xms$HZ_MIN_HEAP_SIZE", "-Xmx$HZ_MAX_HEAP_SIZE"]
 
 repositories {

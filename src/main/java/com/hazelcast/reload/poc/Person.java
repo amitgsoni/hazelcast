@@ -1,4 +1,4 @@
-package com.hazelcast.gradle.starter;
+package com.hazelcast.reload.poc;
 
 import java.io.Serializable;
 

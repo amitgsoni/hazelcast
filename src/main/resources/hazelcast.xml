@@ -5,7 +5,7 @@
 
     <map name="personMap" >
         <map-store enabled="true">
-            <class-name>com.hazelcast.gradle.starter.PersonMapLoader</class-name>
+            <class-name>com.hazelcast.reload.poc.PersonMapLoader</class-name>
         </map-store>
     </map>
 

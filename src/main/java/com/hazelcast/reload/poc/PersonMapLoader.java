@@ -1,13 +1,9 @@
-package com.hazelcast.gradle.starter;
+package com.hazelcast.reload.poc;
 
-import com.hazelcast.core.MapLoader;
 import com.hazelcast.core.MapStore;
 
 import java.util.*;
 
-/**
- * Created by adpkh on 11/6/2016.
- */
 public class PersonMapLoader implements MapStore<Long, Person> {
     @Override
     public Person load(Long key) {

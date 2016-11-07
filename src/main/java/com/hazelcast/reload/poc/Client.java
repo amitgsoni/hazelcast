@@ -1,22 +1,16 @@
-package com.hazelcast.gradle.starter;
+package com.hazelcast.reload.poc;
 
-import com.hazelcast.core.Hazelcast;
+import com.hazelcast.client.HazelcastClient;
 import com.hazelcast.core.HazelcastInstance;
 import com.hazelcast.core.IMap;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
-/**
- * TODO
- *
- * @author Viktor Gamov on 10/5/15.
- *         Twitter: @gamussa
- * @since 0.0.1
- */
-public class Starter {
+public class Client {
     public static void main(String[] args) {
 
-        HazelcastInstance hz = Hazelcast.newHazelcastInstance();
+        HazelcastInstance hz = HazelcastClient.newHazelcastClient();
 
         IMap<Long, Person> personMap = hz.getMap("personMap");
 
@@ -26,9 +20,13 @@ public class Starter {
         newKeys.add(4L);
         personMap.loadAll(newKeys, true);
 
+
+        System.out.println("\n\n\n\n\n\n");
+
         personMap.loadAll(true);
 
         System.out.println("After Map size: " + personMap.size());
 
+        HazelcastClient.shutdownAll();
     }
 }
