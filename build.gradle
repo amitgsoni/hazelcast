@@ -16,7 +16,7 @@ Hazelcast Reload POC
 sourceCompatibility = JavaVersion.VERSION_1_8
 targetCompatibility = JavaVersion.VERSION_1_8
 
-//mainClassName = "com.hazelcast.reload.poc.Server"
+mainClassName = "com.hazelcast.reload.poc.Server"
 applicationDefaultJvmArgs = ["-Xms$HZ_MIN_HEAP_SIZE", "-Xmx$HZ_MAX_HEAP_SIZE"]
 
 repositories {
